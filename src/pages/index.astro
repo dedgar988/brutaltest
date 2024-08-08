@@ -7,43 +7,35 @@ import { Button } from '@eliancodes/brutal-ui';
 import { Card } from '@eliancodes/brutal-ui';
 
 const builtWith = [
-  { name: 'Astro', url: 'https://astro.build/' },
-  { name: 'UnoCSS', url: 'https://uno.antfu.me/' },
+  { name: 'Books', url: 'https://astro.build/' },
+  { name: 'Articles', url: 'https://uno.antfu.me/' },
   {
-    name: 'Content Collections',
+    name: 'Short Stories',
     url: 'https://docs.astro.build/en/guides/content-collections/',
   },
-  { name: 'RSS', url: 'https://docs.astro.build/en/guides/rss/' },
+  { name: 'Audio', url: 'https://docs.astro.build/en/guides/rss/' },
   {
-    name: 'Sitemap',
+    name: 'IELTS',
     url: 'https://docs.astro.build/en/guides/integrations-guide/sitemap/',
   },
-  { name: 'Vercel', url: 'https://vercel.com' },
-  { name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
+  { name: 'Teachers', url: 'https://vercel.com' },
 ];
 ---
 
 <Layout
   title='Home'
   pageTitle='oldbuffaloeducation |Home'
-  description='Build your English knowledge with the Buffalo'
+  description='Build your English with Old Buffalo'
 >
   <main class='bg-pink p-6'>
     <MobileSocials />
     <section id='about' class='grid md:grid-cols-8 gap-8 mt-4'>
-      <h2 class='hidden'>About Brutal</h2>
+      <h2 class='hidden'>About Old Buffalo Education</h2>
       <div class='col-span-4'>
         <Card>
           <div class='flex flex-col justify-between items-start gap-4'>
             <p class='mt-4 outfit text-2xl md:text-5xl lg:text-7xl'>
-              Brutal theme for <a
-                class='text-white'
-                target='_blank'
-                href='https://astro.build/'>Astro</a
-              >
-            </p>
-            <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
-              A minimalistic, neobrutalism theme for Astro.
+              Build your English with Old Buffalo
             </p>
             <Button target={'_self'} href='/blog/'>
               Check out the blog &rarr;
@@ -54,7 +46,7 @@ const builtWith = [
       <div class='col-span-2'>
         <Card>
           <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-            Brutal is built with
+            On the site
           </h2>
           <ul class='flex gap-4 flex-wrap'>
             {
@@ -78,14 +70,11 @@ const builtWith = [
       </div>
       <div class='col-span-2'>
         <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
-            What is Brutal?
-          </h2>
           <p class='poppins'>
-            Brutal is a theme built with Astro, UnoCSS by <a
-              href='https://www.elian.codes/'>Elian</a
-            >. It's a simple, fast, and modern theme that is easy to use and
-            customize. Mainly meant to power blogs and personal websites.
+            The first foreign language idiom I ever truly understood was 'trẻ trâu', which means 'young buffalo' in Vietnamese.  It still makes me smile when I hear someone use it. </p> 
+            <br></br>
+          <p class='poppins'>
+            Hidden meanings are a joy in any language, and the old buffalo has packs of materials ready for you to explore and find new understandings of your own.
           </p>
         </Card>
       </div>
