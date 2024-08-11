@@ -8,10 +8,11 @@ tags:
   - B1+
 description: An adaptation of the Greeky Myth, Orpheus and Eurydice.  Written for learners of intermediate level and higher.
 layout: '../../layouts/StoryPost.astro'
+
 ---
 ## Orpheus and Eurydice
 
-[Vocabulary](../vocabulary/orpheus-and-eurydice.md)
+[Learn more about related vocabulary](/vocabulary/orpheus-and-eurydice)
 
 The deer lies heavily across my shoulders, but my step is lightened by the thought of my wife's smile.   I keep striding, thoughts turning to future happiness, until I sight our little cottage on the hill.   The sun beams pleasantly, and my thoughts return to an evening barbeque.  It's going to be a night to remember.    My musings are interrupted by a chill breeze,  carrying a note of panic and the rhythm of my name.  Oooorpheeeeus.   I recognise the voice.  It is my Wife's.  I drop the deer and run.
 

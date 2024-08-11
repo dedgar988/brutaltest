@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import vocabularyPost from '../../layouts/vocabularyPost.astro'
 
@@ -10,6 +10,10 @@ export async function getStaticPaths() {
     props: { vocabularypost },
   }));
 }
+
+const {slug} = Astro.params;
+const entry = await getEntry('vocabulary', slug);
+
 
 interface Props {
   vocabularypost: CollectionEntry<'vocabulary'>;
