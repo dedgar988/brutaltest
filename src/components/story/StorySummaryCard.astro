@@ -5,18 +5,18 @@ import SummaryCard from '../generic/SummaryCard.astro';
 import { Button } from '@eliancodes/brutal-ui';
 
 interface Props {
-  post: CollectionEntry<'blog'>;
+  story: CollectionEntry<'story'>;
 }
 
-const { post } = Astro.props;
+const { story } = Astro.props;
 ---
 
 <SummaryCard
-  title={post.data.title}
-  description={post.data.description}
+  title={story.data.title}
+  description={story.data.description}
 >
   <div class='flex justify-end my-4'>
-    <Button href={`/blog/${post.slug}/`}>Read post &rarr;</Button>
+    <Button href={`/story/${story.slug}/`}>Read post &rarr;</Button>
   </div>
 
   <div class='hidden sm:inline-block'>
@@ -24,10 +24,10 @@ const { post } = Astro.props;
     <div class='flex justify-between items-center'>
       <ul class='flex gap-4 mt-2'>
         {
-          post.data.tags.map((tag) => {
+          story.data.tags.map((tag) => {
             return (
               <li>
-                <a class="sanchez" href={`/blog/tags/${tag.toLowerCase()}/`}>
+                <a class="sanchez" href={`/story/tags/${tag.toLowerCase()}/`}>
                   <Pill>{tag}</Pill>
                 </a>
               </li>
@@ -36,7 +36,7 @@ const { post } = Astro.props;
         }
       </ul>
       {
-        post.data.draft && (
+        story.data.draft && (
           <span class='bg-green rounded-full border-2 py-1 px-4 text-sm border-black card-shadow'>
             Draft
           </span>

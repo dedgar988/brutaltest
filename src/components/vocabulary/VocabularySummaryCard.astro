@@ -5,18 +5,18 @@ import SummaryCard from '../generic/SummaryCard.astro';
 import { Button } from '@eliancodes/brutal-ui';
 
 interface Props {
-  post: CollectionEntry<'blog'>;
+  vocabulary: CollectionEntry<'vocabulary'>;
 }
 
-const { post } = Astro.props;
+const { vocabulary } = Astro.props;
 ---
 
 <SummaryCard
-  title={post.data.title}
-  description={post.data.description}
+  title={vocabulary.data.title}
+  description={vocabulary.data.description}
 >
   <div class='flex justify-end my-4'>
-    <Button href={`/blog/${post.slug}/`}>Read post &rarr;</Button>
+    <Button href={`/vocabulary/${vocabulary.slug}/`}>Read post &rarr;</Button>
   </div>
 
   <div class='hidden sm:inline-block'>
@@ -24,10 +24,10 @@ const { post } = Astro.props;
     <div class='flex justify-between items-center'>
       <ul class='flex gap-4 mt-2'>
         {
-          post.data.tags.map((tag) => {
+          vocabulary.data.tags.map((tag) => {
             return (
               <li>
-                <a class="sanchez" href={`/blog/tags/${tag.toLowerCase()}/`}>
+                <a class="sanchez" href={`/vocabulary/tags/${tag.toLowerCase()}/`}>
                   <Pill>{tag}</Pill>
                 </a>
               </li>
@@ -36,7 +36,7 @@ const { post } = Astro.props;
         }
       </ul>
       {
-        post.data.draft && (
+        vocabulary.data.draft && (
           <span class='bg-green rounded-full border-2 py-1 px-4 text-sm border-black card-shadow'>
             Draft
           </span>

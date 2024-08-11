@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '@layouts/Default.astro';
-import StoryList from '@components/story/StoryList.astro';
+import VocabularyList from '@components/vocabulary/VocabularyList.astro';
 
-const stories = await getCollection('story').then((collection) =>
+const vocabularyPosts = await getCollection('vocabulary').then((collection) =>
   collection.reverse()
 );
 ---
@@ -14,6 +14,7 @@ const stories = await getCollection('story').then((collection) =>
   pageTitle='Old Buffalo Stories'
 >
   <main class='bg-green p-6'>
-    <StoryList stories ={stories} />
+    <VocabularyList vocabularyPosts ={vocabularyPosts} />
   </main>
 </Layout>
+

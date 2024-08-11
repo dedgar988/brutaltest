@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import VocabularySummaryCard from './VocabularySummaryCard.astro';
+
+interface Props {
+  vocabularyPosts: CollectionEntry<'vocabulary'>[];
+}
+
+const { vocabularyPosts } = Astro.props;
+---
+
+<ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+  {
+    vocabularyPosts.map((vocabulary) => {
+      return (
+        <li>
+          <VocabularySummaryCard vocabulary ={vocabulary} />
+        </li>
+      );
+    })
+  }
+</ul>

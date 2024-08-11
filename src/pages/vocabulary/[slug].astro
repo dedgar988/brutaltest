@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import vocabularyPost from '../../layouts/vocabularyPost.astro'
+
+export async function getStaticPaths() {
+  const vocabularyentries = await getCollection('vocabulary');
+  return vocabularyentries.map((vocabularypost) => ({
+    params: { slug: vocabularypost.slug },
+    props: { vocabularypost },
+  }));
+}
+
+interface Props {
+  vocabularypost: CollectionEntry<'vocabulary'>;
+}
+
+const { vocabularypost } = Astro.props;
+const { Content } = await vocabularypost.render();
+---
+<Content />
