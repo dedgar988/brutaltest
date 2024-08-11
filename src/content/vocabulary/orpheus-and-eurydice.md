@@ -1,6 +1,5 @@
 ---
 title: Orpheus and Eurydice
-slug: orpheus-and-eurydice
 pubDate: 11/08/2024 15:00
 author: "David James Edgar"
 tags:
